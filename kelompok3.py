@@ -58,3 +58,18 @@ for i in range(N + 1):
         break
 
     xi = x1 - y1 * (x1 - x0) / (y1 - y0)
+    fxi = f(xi)
+
+    print(f"|{i:^5}|{x0:^15.5f}|{x1:^15.5f}|{y0:^15.5E}|{y1:^15.5E}|{xi:^15.5f}|{abs(fxi):^15.5E}|")
+
+    if abs(fxi) < e:
+        print("+-----+---------------+---------------+---------------+---------------+---------------+---------------+")
+        print(f"\nAkar ditemukan pada iterasi ke-{i}")
+        print(f"Akar mendekati: {xi:.8f}")
+        break
+
+    # Update nilai
+    x0, x1 = x1, xi
+else:
+    print("+-----+---------------+---------------+---------------+---------------+---------------+---------------+")
+    print(f"\nProses berhenti setelah {N} iterasi, belum mencapai toleransi error {e}")
