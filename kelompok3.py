@@ -43,3 +43,18 @@ def f(x):
     return eval(persamaan, {"x": x, "np": np,
                             "sin": np.sin, "cos": np.cos, "tan": np.tan,
                             "sec": sec, "csc": csc, "cot": cot,
+                            "arcsin": np.arcsin, "arccos": np.arccos, "arctan": np.arctan,
+                            "exp": np.exp, "log": np.log, "sqrt": np.sqrt, "pi": np.pi})
+
+print("\n+-----+---------------+---------------+---------------+---------------+---------------+---------------+")
+print(f"|{'i':^5}|{'x0':^15}|{'x1':^15}|{'y0=f(x0)':^15}|{'y1=f(x1)':^15}|{'xi':^15}|{'|f(xi)|':^15}|")
+print("+-----+---------------+---------------+---------------+---------------+---------------+---------------+")
+
+for i in range(N + 1):
+    y0 = f(x0)
+    y1 = f(x1)
+    if y1 - y0 == 0:
+        print(f"|{i:^5}|{x0:^15.5f}|{x1:^15.5f}|{y0:^15.5E}|{y1:^15.5E}|{'#DIV/0!':^15}|{'#DIV/0!':^15}|")
+        break
+
+    xi = x1 - y1 * (x1 - x0) / (y1 - y0)
