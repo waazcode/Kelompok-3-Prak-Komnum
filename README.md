@@ -29,3 +29,11 @@ Logaritma natural (log)
 Akar kuadrat (sqrt)
 Menampilkan tabel iterasi secara rapi
 Menghentikan iterasi otomatis jika akar ditemukan
+
+---
+
+## 📸 Hasil Output Program
+
+Berikut contoh tampilan program ketika dijalankan di terminal:
+![WhatsApp Image 2025-10-26 at 22 40 48_d12b5d46](https://github.com/user-attachments/assets/9104868f-31ff-4088-a1a3-d6e8bd71b984)
+
