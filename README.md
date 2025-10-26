@@ -18,22 +18,14 @@ Metode ini merupakan pendekatan numerik yang tidak memerlukan turunan fungsi, te
 
 ---
 
-📚 Fitur
+## 📚 Fitur
 
 Mendukung operasi:
-
 Pangkat (x**2, x**3, dst)
-
 Fungsi trigonometri (sin, cos, tan)
-
 Fungsi kebalikannya (sec, csc, cot)
-
 Fungsi eksponensial (exp)
-
 Logaritma natural (log)
-
 Akar kuadrat (sqrt)
-
 Menampilkan tabel iterasi secara rapi
-
 Menghentikan iterasi otomatis jika akar ditemukan
