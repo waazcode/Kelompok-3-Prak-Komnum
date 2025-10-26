@@ -27,3 +27,19 @@ print("  • x**3 - 2*x - 5")
 print("  • exp(x) - 3*x")
 print("  • sin(x) - 0.5")
 print("="*70)
+
+# Input dari user
+persamaan = input("Masukkan persamaan f(x): ")
+x0 = float(input("Masukkan nilai x0: "))
+x1 = float(input("Masukkan nilai x1: "))
+e = float(input("Masukkan toleransi error (e): "))
+N = int(input("Masukkan jumlah iterasi maksimum (N): "))
+
+# Definisikan fungsi f(x) dari input user
+def f(x):
+    def sec(x): return 1/np.cos(x)
+    def csc(x): return 1/np.sin(x)
+    def cot(x): return 1/np.tan(x)
+    return eval(persamaan, {"x": x, "np": np,
+                            "sin": np.sin, "cos": np.cos, "tan": np.tan,
+                            "sec": sec, "csc": csc, "cot": cot,
